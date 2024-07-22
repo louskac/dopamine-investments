@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'BR Candor';
+  src: url('/fonts/BRCandor-Light.otf') format('opentype');
+  font-weight: lighter;
+  font-style: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BR Candors", sans-serif;
+  scroll-behavior: smooth;
+  font-weight: lighter;
+}
+
+h2{
+  color: #E19600 !important;
+  font-size: 36px;
+}
+
+h3{
+  color: #E19600 !important;
+}
+
+black-background{
+  background-color: #131313;
+}
+
+.skewed-background {
+  background: url('/cover.png') center/cover no-repeat;
+  width: 110%; /* Make it slightly larger to compensate for skew */
+  height: 110%; /* Make it slightly larger to compensate for skew */
+  position: absolute;
+  transform: skewY(-5deg); /* Adjust the angle as needed */
+  transform-origin: top left;
+  padding: 0 30px; /* Adjusted to not affect height */
+}
+
+.skewed-background::before,
+.skewed-background::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30px; /* Height of the orange border */
+  background-color: #E19600;
+  z-index: 0; /* Ensure it appears below the content */
+}
+
+.skewed-background::before {
+  top: 0;
+}
+
+.skewed-background::after {
+  bottom: 0;
+}
+
+.gradient-02 {
+  background-color: #E19600;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.feedback-gradient {
+  position: absolute;
+  width: 200px;
+  height: 316px;
+  left: 0px;
+  top: 0px;
+
+  background: #8d39a3;
+  filter: blur(175px);
+}
+
+.footer-gradient {
+  background-color: #131313;
+}
+
+.hexagon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust for your desired background color */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 6.69873%, 75% 6.69873%, 100% 50%, 75% 93.3013%, 25% 93.3013%, 0% 50%);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 17.32px solid rgba(255, 255, 255, 0.2); /* Adjust for your desired border color */
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 17.32px solid rgba(255, 255, 255, 0.2); /* Adjust for your desired border color */
+}
+
+/* Ensure the SVG is displayed in white */
+.white-svg {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
